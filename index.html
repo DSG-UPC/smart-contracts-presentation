@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,25 +25,55 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+			<section data-markdown>
+## Blockchain and Smart Contracts
+			</section>
+			<section>
+				<section data-markdown>
+<script type="text/template">
+#### Blockchain <cite>[1]</cite>
+* Decentralized, replicated, immutable and tamper-evident log <!-- .element: class="fragment fade-up" -->
+* Disintermediation : Untrusted parties can directly and transparently interact without the presence of a trusted intermediary <!-- .element: class="fragment fade-up" -->
+
+[1] Bano, Shehar, et al. ["Consensus in the age of blockchains."](https://arxiv.org/pdf/1711.03936.pdf) (2017).
+</script>
+				</section>
+				<section data-markdown>
+#### Blockchain Smart Contracts 
+Code that is **stored on**, **acts upon** and **executed on**  the blockchain
+
+
+#### Legally Binding Smart Contracts <cite>[2]</cite>
+
+Code that **articulates**, **verifies**, and **enforces** an agreement between parties
+
+
+[2] Stark, Josh. ["Making Sense of Blockchain Smart Contracts"](https://www.coindesk.com/making-sense-smart-contracts) (2016).
+				</section>
+			</section>
+			<section>
+				<section data-markdown>
+#### Ethereum
+* Introduced blockchain computation with EVM, a Replicated State Machine
+* Introduced storage with SWARM (under development)
+* 
+				</section>
 					<section data-markdown>
-### Smart Contracts as Blockchain Programs
-* Is the collection of code and data living in a blockchain
+#### Smart Contracts as Blockchain Programs
+* A collection of code and data living in a blockchain
 * Introduced in Bitcoin with Script (stack-based)
 * Ethereum extends with Solidity (Turing-complete)
-* Execution in a Replicated State Machine (EVM)
-* 
-* Transactions are like Remote Procedure Calls
 					</section>
 					<section data-markdown>
-	#### Test
+	##### Smart Contracts in Ethereum
 	* Transactions are like Remote Procedure Calls
+	* Execution in a Replicated State Machine (EVM)
 	* Min processing time ~ Block time
 	* Code execution has a [cost](https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit#gid=0) ([gas](http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html))
 					</section>
 				</section>
 				<section data-markdown>
-### Smart Contracts as Value
+#### Smart Contracts as Value
 * Sitio: Un punto geografico.
 * Elementos: Descripción de los elementos de un punto.
 * Tramo: Un tramo de fibra entre dos sitios.
@@ -53,16 +84,25 @@
 
 				</section>
 				<section data-markdown>
-### Preguntas ?
-### info
-* [Presentación](https://github.com/DSG-UPC/smart-contracts-presentation)
-* Email: edimoger _at_ ac.upc.edu
+### Real Life Applications (wishlist)
+* Investment (Cryptocurrencies, ICOs)
+* Supply Chain
+* Governance (DAOs)
+				</section>
+				<section data-markdown>
+### Open Questions
+* Are smart contracts safe?
+* Are smart contracts the future?
+
+### Your Questions?
+
+
 				</section>
 				<section data-markdown>
 ### Preguntas ?
 ### info
-* [Presentación](https://github.com/agustim/sax2016-XLL-FO)
-* Email: edimoger _at_ ac.upc.edu
+* Presentation](https://github.com/DSG-UPC/smart-contracts-presentation)
+* edimoger _at_ ac.upc.edu
 
 				</section>
 			</div>
@@ -76,6 +116,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				pdfSeparateFragments: false,
 				// Display presentation control arrows
 				controls: true,
 
