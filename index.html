@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Smart Contracts (in Ethereum context)</title>
+		<title>Smart Contracts (in Ethereum)</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -26,7 +26,7 @@
 		<div class="reveal">
 			<div class="slides">
 			<section data-markdown>
-## Blockchain and Smart Contracts
+### Blockchain and Smart Contracts
 			</section>
 			<section>
 				<section data-markdown>
@@ -35,73 +35,117 @@
 * Decentralized, replicated, immutable and tamper-evident log <!-- .element: class="fragment fade-up" -->
 * Disintermediation : Untrusted parties can directly and transparently interact without the presence of a trusted intermediary <!-- .element: class="fragment fade-up" -->
 
-[1] Bano, Shehar, et al. ["Consensus in the age of blockchains."](https://arxiv.org/pdf/1711.03936.pdf) (2017).
+[1] Bano, S., et al. ["Consensus in the age of blockchains."](https://arxiv.org/pdf/1711.03936.pdf) (2017).
 </script>
 				</section>
 				<section data-markdown>
-#### Blockchain Smart Contracts 
-Code that is **stored on**, **acts upon** and **executed on**  the blockchain
+	#### Ethereum
+	* Introduced blockchain computation -> Ethereum Virtual Machine (EVM)
+	* Introduced blockchain storage -> SWARM (under development)
+	* Consensus: Ethash (modified PoW)
+
+				</section>
+				<section data-markdown>
+##### Blockchain Smart Contracts
+* Code that is **stored in**, **acts upon** and **executed on**  the blockchain
 
 
-#### Legally Binding Smart Contracts <cite>[2]</cite>
+##### Legally Binding Smart Contracts <cite>[2]</cite>
+* Code that **articulates**, **verifies**, and **enforces** an agreement between parties
 
-Code that **articulates**, **verifies**, and **enforces** an agreement between parties
+[2] Stark, J. ["Making Sense of Blockchain Smart Contracts"](https://www.coindesk.com/making-sense-smart-contracts) (2016).
+				</section>
+				<section data-markdown>
+#### Beware of the hype... <cite>[3]</cite>
+* Cryptocurrencies Market Cap: 135 Billion $
+* Largest known attack ~ 500M $
 
+![Blockchain Hype]](./hype.png)
 
-[2] Stark, Josh. ["Making Sense of Blockchain Smart Contracts"](https://www.coindesk.com/making-sense-smart-contracts) (2016).
+[3] Bartoletti, M. and Pompianu, L., [An empirical analysis of smart contracts...](https://arxiv.org/pdf/1703.06322.pdf) (2017)
 				</section>
 			</section>
 			<section>
-				<section data-markdown>
-#### Ethereum
-* Introduced blockchain computation with EVM, a Replicated State Machine
-* Introduced storage with SWARM (under development)
-* 
-				</section>
 					<section data-markdown>
-#### Smart Contracts as Blockchain Programs
-* A collection of code and data living in a blockchain
-* Introduced in Bitcoin with Script (stack-based)
-* Ethereum extends with Solidity (Turing-complete)
+	#### Smart Contracts in Ethereum (1)
+	* Already existed in Bitcoin with Script (stack-based)
+	* Ethereum extends with EVM (Turing-complete)
+	* EVM bindings to high level smart conrtact languages ([Solidity](https://solidity.readthedocs.io/))
+	* Communication with RPC and WS
+	* Transactions: RPCs that modify blockchain state
+
 					</section>
 					<section data-markdown>
-	##### Smart Contracts in Ethereum
-	* Transactions are like Remote Procedure Calls
-	* Execution in a Replicated State Machine (EVM)
+	##### Smart Contracts in Ethereum (2)
+	* Execution in EVM is fully replicated
 	* Min processing time ~ Block time
 	* Code execution has a [cost](https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit#gid=0) ([gas](http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html))
+	* Communication with external world? (Events, Oracles)
+	* Standardization -> ERCs
+					</section>
+<!--
+				<section data-markdown>
+	#### Smart Contracts as Value
+	* Sitio: Un punto geografico.
+	* Elementos: Descripción de los elementos de un punto.
+	* Tramo: Un tramo de fibra entre dos sitios.
+	* Fusiones: Las fusiones que existen en un sitio entre dos tramos.
+				</section>
+-->
+
+					<section data-markdown>
+	#### Useful tools
+	* [Solidity](https://solidity.readthedocs.io/) (#develop)
+	* [Truffle](https://truffleframework.com/truffle) (#deploy #test)
+	* [Ganache Local Blockchain](https://truffleframework.com/ganache) (#test)
+	* [Remix Web](https://remix.ethereum.org/) (#deploy #test)
+	* [Web3 Ethereum API](https://web3js.readthedocs.io/en/1.0/) (#connector)
+	* [Metamask Plugin](https://metamask.io/) (#connector)
 					</section>
 				</section>
-				<section data-markdown>
-#### Smart Contracts as Value
-* Sitio: Un punto geografico.
-* Elementos: Descripción de los elementos de un punto.
-* Tramo: Un tramo de fibra entre dos sitios.
-* Fusiones: Las fusiones que existen en un sitio entre dos tramos.
-				</section>
-				<section data-markdown>
-### Smart Contracts as Legal Binding documents
+<!--
+					<section data-markdown>
+	#### Real Life Applications <cite>[3]</cite>
 
+	![Contract Statistics]](./contracts1.png)
+
+	[3] Bartoletti, M. and Pompianu, L., [An empirical analysis of smart contracts...](https://arxiv.org/pdf/1703.06322.pdf) (2017)
 				</section>
+-->
 				<section data-markdown>
-### Real Life Applications (wishlist)
+#### Real Life Applications
+Based on: **transparency**, **verifiability** and **immutability**
 * Investment (Cryptocurrencies, ICOs)
 * Supply Chain
-* Governance (DAOs)
+* Digital Identity
+* Notary Applications
+* Automated Governance (DAOs)
 				</section>
 				<section data-markdown>
-### Open Questions
-* Are smart contracts safe?
-* Are smart contracts the future?
+#### Challenges <cite>[4]</cite>
+* Difficulty of programming
+* Security
+* Privacy
+* Performance
+* Standardization
 
-### Your Questions?
+[4] Alharby, M. and van Moorsel, A., [Blockchain-based smart contracts: A systematic mapping study](https://arxiv.org/pdf/1710.06372.pdf) (2017)
+				</section>
+				<section data-markdown>
+#### Demo
 
+[Simple Coin with Truffle, Metamask and Remix](https://github.com/truffle-box/metacoin-box)
 
 				</section>
 				<section data-markdown>
-### Preguntas ?
-### info
-* Presentation](https://github.com/DSG-UPC/smart-contracts-presentation)
+#### MeshDapp
+![MeshDapp Architecture](./meshdapp.png)
+
+				</section>
+				<section data-markdown>
+#### Questions ?
+
+* [Presentation Source](https://github.com/DSG-UPC/smart-contracts-presentation)
 * edimoger _at_ ac.upc.edu
 
 				</section>
@@ -138,7 +182,7 @@ Code that **articulates**, **verifies**, and **enforces** an agreement between p
 				slideNumber: 'c/t',
 
 				// Push each slide change to the browser history
-				history: false,
+				history: true,
 
 				// Enable keyboard shortcuts for navigation
 				keyboard: true,
